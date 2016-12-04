@@ -14,7 +14,24 @@ def register():
 
 @app.route('/play')
 def play():
-    return 'Hello, World!'
+    return 'Hello, World! {value}'.format(value=app.config['CLIENT'].value)
+
+
+class Client(object):
+
+    def __init__(self):
+        self.value = 123
+
+
+def create_app(client):
+
+    app.config['CLIENT'] = client
+    return app
+
 
 if __name__ == '__main__':
+
+    client = Client()
+    app = create_app(client)
     app.run(debug=True, host='0.0.0.0')
+

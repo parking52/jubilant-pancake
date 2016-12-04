@@ -1,3 +1,3 @@
-docker build -t dockerfile:latest .
-
-docker run -d -p 5000:5000 dockerfile
+export FLASK_APP=client.py
+cd client
+flask run

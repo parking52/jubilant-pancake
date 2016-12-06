@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 
 ## RUN export FLASK_APP=client.py
 ##  flask run
-CMD ./run_client.sh
+CMD python client/client.py

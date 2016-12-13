@@ -1,0 +1,1 @@
+curl -H "Content-type: application/json" -X POST http://0.0.0.0:5000/game_endpoint/10 -d '{"message":"Hello Data"}'
